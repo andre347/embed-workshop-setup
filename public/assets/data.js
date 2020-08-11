@@ -20,7 +20,7 @@ const content = [
     codesanboxURL:
       "https://codesandbox.io/s/03-interact-with-the-tableau-visualisation-g38je?file=/index.html",
     text:
-      "By using the Tableau JavaScript API tou get a lot of possibilities in terms of interactivity. In this section we will look at the export options of Tableau dashboards. You will learn how you can give the end user the ability to export to PDF, Crosstab and PowerPoint.",
+      "By using the Tableau JavaScript API you get a lot of possibilities in terms of interactivity. In this section we will look at the export options of Tableau dashboards. You will learn how you can give the end user the ability to export to PDF, Crosstab and PowerPoint.",
   },
   {
     title: "Filtering",
