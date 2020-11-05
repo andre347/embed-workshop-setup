@@ -3,6 +3,7 @@ const list = document.getElementById("stepList");
 const content = [
   {
     title: "Basic Embedding",
+    level: "Basic",
     codesanboxURL:
       "https://codesandbox.io/s/01-basic-embedding-h1k3s?file=/index.html",
     text:
@@ -10,6 +11,7 @@ const content = [
   },
   {
     title: "Using the Tableau JavaScript API",
+    level: "Basic",
     codesanboxURL:
       "https://codesandbox.io/s/02-using-the-tableau-javascript-api-65jmn?file=/index.html",
     text:
@@ -17,35 +19,53 @@ const content = [
   },
   {
     title: "Interact with the Tableau visualisation",
+    level: "Basic",
     codesanboxURL:
       "https://codesandbox.io/s/03-interact-with-the-tableau-visualisation-g38je?file=/index.html",
     text:
       "By using the Tableau JavaScript API you get a lot of possibilities in terms of interactivity. In this section we will look at the export options of Tableau dashboards. You will learn how you can give the end user the ability to export to PDF, Crosstab and PowerPoint.",
   },
   {
-    title: "Filtering",
+    title: "Filtering: before Load",
+    level: "Basic",
     codesanboxURL: "https://codesandbox.io/s/04-filtering-urkec",
     text:
-      "When you embed Tableau content in a webpage you can also interact with Tableau filters, parameters and actions. In this section we focus on building our own dropdown filter.",
+      "Apply filters to display a subset of the data available for a view. You can either apply filters before a visualization has been loaded or after..",
+  },
+  {
+    title: "Filtering: after load",
+    level: "Intermediate",
+    codesanboxURL: "https://codesandbox.io/s/04-filtering-urkec",
+    text:
+      "When you embed Tableau content in a webpage you can also interact with Tableau filters, parameters and actions. In this section we focus on filtering after a dashboard has loaded.",
   },
   {
     title: "Dynamic Show & Hide",
+    level: "Intermediate",
     codesanboxURL: "https://codesandbox.io/s/05-dynamic-show-and-hide-5vg1v",
     text:
       "A good usecase for embedding Tableau content is to dynamically show it or swap to another visualisation depending on user interaction.",
   },
   {
     title: "getUnderlyingTableDataAsync()",
+    level: "Advanced",
     codesanboxURL:
       "https://codesandbox.io/s/getunderlyingtabledataasync-r424s?file=/index.html",
     text:
       "You can also integrate Tableau with third-party libraries. An example of this could be D3.js. You can leverage more applications because they can share the underlying data that is powering the Tableau dashboard.",
   },
+  {
+    title: "Listen for Tableau Events",
+    level: "Advanced",
+    codesanboxURL:
+      "https://codesandbox.io/s/07-listen-to-events-8nm35?file=/index.html",
+    text:
+      "The Tableau JavaScript API offers a few eventlisteners. In this section we listen for 'mark selections'. This is when a dashboard user click on an element of a visualisation. You can then get access the data that powers that mark.",
+  },
 ];
 
 // loop over all the items in the array and create steps
-content.forEach(({ title, codesanboxURL, text }, idx) => {
-  console.log(idx);
+content.forEach(({ title, codesanboxURL, text, level }, idx) => {
   const element = `<li class="py-12">
                 <article
                   class="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline"
@@ -60,6 +80,7 @@ content.forEach(({ title, codesanboxURL, text }, idx) => {
                           >${title}</a
                         >
                       </h2>
+                      <div class="mt-2 flex items-center prose leading-5 text-gray-700 sm:mr-6">Difficulty: ${level}</div>
                       <div class="prose max-w-none text-gray-600">
                         <p>
                          ${text}
