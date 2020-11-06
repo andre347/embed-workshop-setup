@@ -62,6 +62,14 @@ const content = [
     text:
       "The Tableau JavaScript API offers a few eventlisteners. In this section we listen for 'mark selections'. This is when a dashboard user click on an element of a visualisation. You can then get access the data that powers that mark.",
   },
+  {
+    title: "Content Hierarchy",
+    level: "Intermediate",
+    codesanboxURL:
+      "https://codesandbox.io/s/09-content-hierarchy-rekbl?file=/index.html",
+    text:
+      "The Tableau JavaScript API offers various access points. The top level one is the Viz Manager and then you can drill into dashboards, worksheets, stories etc. In this section we look at how this hierarchy works.",
+  },
 ];
 
 // loop over all the items in the array and create steps
