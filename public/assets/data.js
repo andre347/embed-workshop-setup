@@ -28,9 +28,9 @@ const content = [
   {
     title: "Filtering: before Load",
     level: "Basic",
-    codesanboxURL: "https://codesandbox.io/s/04-filtering-urkec",
+    codesanboxURL: "https://codesandbox.io/s/04-filtering-before-load-sz2ik",
     text:
-      "Apply filters to display a subset of the data available for a view. You can either apply filters before a visualization has been loaded or after..",
+      "Apply filters to display a subset of the data available for a view. You can either apply filters before a visualization has been loaded or after.",
   },
   {
     title: "Filtering: after load",
